@@ -3,9 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signup_form.css">
     <title>Document</title>
 </head>
+
 <body>
-    
+    <div class="split-container">
+
+        <div class="split-right">
+
+        <h2>
+            This is not a real online service! You know you need something like this in your life
+            to help you realize your deepest dreams. Sign up now to get started.
+        </h2>
+
+        <form action="/submit-signup" method="post">
+            <h3>Let's do this!</h3>
+
+            <div class="form-group">
+                <input
+                    type="text"
+                    id="first_name"
+                    name="first_name"
+                    placeholder="First Name"
+                    required
+                    pattern="^[^0-9]+$"
+                    maxlength="50"
+                >
+                <label for="first_name" data-help="Your given name, no numbers allowed!">
+                    FIRST NAME
+                </label>
+            </div>
+
+            <div class="form-group">
+                <input
+                    type="text"
+                    id="last_name"
+                    name="last_name"
+                    placeholder="Last Name"
+                    required
+                    pattern="^[^0-9]+$"
+                    maxlength="50"
+                >
+                <label for="last_name" data-help="Your family name">
+                    LAST NAME
+                </label>
+            </div>
+
+            <div class="form-group">
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Email"
+                    required
+                    maxlength="100"
+                >
+                <label for="email" data-help="We'll never share your email with anyone else.">
+                    EMAIL
+                </label>
+            </div>
+
+            <div class="form-group">
+                <input
+                    type="tel"
+                    id="phone_number"
+                    name="phone_number"
+                    placeholder="123456789"
+                    required
+                    pattern="^[0-9]{9}$"
+                    maxlength="11"
+                >
+                <label for="phone_number" data-help="Enter a valid phone number with 11 digits.">
+                    PHONE NUMBER
+                </label>
+            </div>
+
+            <div class="form-group">
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Password"
+                    required
+                    minlength="8"
+                    maxlength="20"
+                >
+                <label for="password" data-help="Choose a strong password with at least 8 characters.">
+                    PASSWORD
+                </label>
+            </div>
+
+            <div class="form-group">
+                <input
+                    type="password"
+                    id="confirm_password"
+                    name="confirm_password"
+                    required
+                    minlength="8"
+                    maxlength="20"
+                >
+                <label for="confirm_password" data-help="Password must be the same as password.">
+                    CONFIRM PASSWORD
+                </label>
+            </div>
+
+            <button class="styled" type="button">
+                Create Account
+            </button>
+            <div class="text-block">
+                <p>
+                    Already have an account?
+                    <a href="/login">Log in</a>
+                </p>
+            </div>
+        </form>
+        </div>
+
+
+        <div class="split-left">
+            <div class="left-bg">
+            <img class="left-bg" img src="leaf.avif" alt="green-leaf-plant-in-close-up-photography-25xggax4bSA">
+            </div>
+            <div class="odin-banner">
+            
+                <img class="logo-bg" img src="odin-lined.png" class="logo-bg">
+                <p>ODIN</p>
+            </div>
+            <footer>
+            
+                <p>
+                    Photo by
+                    <a href="https://unsplash.com/@haliewestphoto">Halie West</a>
+                    on
+                    <a href="https://unsplash.com/photos/green-leaf-plant-in-close-up-photography-25xggax4bSA">
+                        Unsplash
+                    </a>.
+                </p></footer>
+            
+        </div>
+
+    </div>
 </body>
 </html>
